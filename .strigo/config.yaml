@@ -1,0 +1,5 @@
+classes:
+  - exercises:
+      # `file` is relative to .strigo directory
+      - file: "../dockercoins.md"
+        title: "Day 1 Recap"
