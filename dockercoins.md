@@ -7,10 +7,12 @@ Create a Deployment for each of the components:
  - dockercoins/webui:v0.1
  - redis
  
- Hint: use `kubectl create deployment --image=your_image_name`
+ Hint: use `kubectl create deployment <name> --image=your_image_name`
  
- Then expose redis, rng and hasher for internal access.
- Then expose webui for external access.
+ Then expose redis (on port 6379), rng and hasher (on port 80) for internal access.
+ Then expose webui for external access (on port 80 with NodePort).
+ 
+ Hint: `kubectl expose deployment <name> --port=<port> <--type=Type>`
  
  Verify everything works by visiting the webui and checking service logs.
  
